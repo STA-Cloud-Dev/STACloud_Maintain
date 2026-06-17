@@ -1,0 +1,12 @@
+{
+  "name": "stacloud-maintain",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "go:dev": "go run .",
+    "check": "node --check public/assets/app.js && node --check server.mjs"
+  }
+}
