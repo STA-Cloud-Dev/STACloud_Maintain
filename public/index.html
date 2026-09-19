@@ -21,7 +21,10 @@
       <span class="background-ring background-ring-two" aria-hidden="true"></span>
       <span class="background-scanline" aria-hidden="true"></span>
       <span class="beach-sun" aria-hidden="true"></span>
+      <span class="beach-clouds" aria-hidden="true"></span>
+      <span class="sea-shimmer" aria-hidden="true"></span>
       <span class="beach-shore" aria-hidden="true"></span>
+      <span class="rain-ripples" aria-hidden="true"></span>
       <span class="spring-rain" aria-hidden="true"></span>
       <span class="falling-leaves" aria-hidden="true">
         <span></span>
@@ -64,6 +67,11 @@
             Chúng tôi sẽ mở lại sau.
           </p>
 
+          <div class="hero-badges" aria-label="Thông tin bảo trì">
+            <span><i class="badge-icon badge-icon-shield" aria-hidden="true"></i>Dữ liệu được bảo vệ</span>
+            <span><i class="badge-icon badge-icon-speed" aria-hidden="true"></i>Tối ưu hiệu năng</span>
+          </div>
+
           <div class="notice-panel" role="note">
             <span class="notice-bar" aria-hidden="true"></span>
             <div>
@@ -73,12 +81,20 @@
           </div>
         </section>
 
-        <section class="visual-panel" aria-label="Trang thai bao tri STACloud">
+        <section class="visual-panel" aria-label="Trạng thái bảo trì STACloud">
           <div class="cloud-console">
             <div class="console-header">
-              <span></span>
-              <span></span>
-              <span></span>
+              <div class="console-lights" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p><span class="console-online" aria-hidden="true"></span>Maintenance node 01</p>
+            </div>
+
+            <div class="console-telemetry" aria-hidden="true">
+              <span><small>REGION</small><strong>VN-SGN</strong></span>
+              <span><small>MODE</small><strong>UPGRADE</strong></span>
             </div>
 
             <div class="logo-orbit" aria-hidden="true">
@@ -86,9 +102,9 @@
             </div>
 
             <div class="server-stack" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span data-label="Web services"></span>
+              <span data-label="Cloud systems"></span>
+              <span data-label="Data integrity"></span>
             </div>
 
             <div class="progress-label">
@@ -102,7 +118,7 @@
         </section>
       </main>
 
-      <section class="status-grid" aria-label="Tinh trang hien tai">
+      <section class="status-grid" aria-label="Tình trạng hiện tại">
         <article class="status-card">
           <span class="card-dot card-dot-warning" aria-hidden="true"></span>
           <p>Trang chính</p>
@@ -123,6 +139,56 @@
           <p>Cập nhật</p>
           <strong>Sẽ mở lại sau</strong>
         </article>
+      </section>
+
+      <section class="maintenance-details" aria-labelledby="maintenance-details-title">
+        <div class="details-heading">
+          <p class="eyebrow">Tiến trình bảo trì</p>
+          <h2 id="maintenance-details-title">Chúng tôi đang hoàn thiện từng bước</h2>
+          <p>Mỗi hạng mục được kiểm tra kỹ trước khi website hoạt động trở lại.</p>
+        </div>
+
+        <ol class="maintenance-steps">
+          <li class="step-complete">
+            <span class="step-number" aria-hidden="true">01</span>
+            <div>
+              <strong>Sao lưu &amp; bảo vệ dữ liệu</strong>
+              <p>Dữ liệu quan trọng đã được xác minh và bảo toàn.</p>
+            </div>
+            <span class="step-state">Hoàn tất</span>
+          </li>
+          <li class="step-active">
+            <span class="step-number" aria-hidden="true">02</span>
+            <div>
+              <strong>Nâng cấp hạ tầng</strong>
+              <p>Tối ưu tốc độ, khả năng phản hồi và độ ổn định.</p>
+            </div>
+            <span class="step-state">Đang thực hiện</span>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">03</span>
+            <div>
+              <strong>Kiểm tra trước khi mở lại</strong>
+              <p>Rà soát toàn bộ luồng truy cập trên desktop và mobile.</p>
+            </div>
+            <span class="step-state">Tiếp theo</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="assurance-strip" aria-label="Cam kết trong thời gian bảo trì">
+        <div>
+          <span class="assurance-icon assurance-lock" aria-hidden="true"></span>
+          <p><strong>An toàn dữ liệu</strong><span>Các dữ liệu hiện có vẫn được bảo toàn.</span></p>
+        </div>
+        <div>
+          <span class="assurance-icon assurance-cloud" aria-hidden="true"></span>
+          <p><strong>Hạ tầng ổn định</strong><span>Hệ thống đang được kiểm tra liên tục.</span></p>
+        </div>
+        <div>
+          <span class="assurance-icon assurance-refresh" aria-hidden="true"></span>
+          <p><strong>Cập nhật trạng thái</strong><span>Chỉ cần tải lại trang khi chúng tôi mở cửa.</span></p>
+        </div>
       </section>
 
       <footer class="footer-line">
