@@ -67,11 +67,11 @@ function listen(port, attempt) {
 
 function resolveFile(pathname) {
   const candidate = pathname === "/" || pathname === "/index.html"
-    ? join(root, "public", "index.html")
+    ? join(root, "docs", "index.html")
     : pathname.startsWith("/assets/")
-      ? join(root, "public", pathname)
+      ? join(root, "docs", pathname)
       : pathname.startsWith("/logo/")
-        ? join(root, pathname)
+        ? join(root, "docs", pathname)
         : "";
 
   if (!candidate) {

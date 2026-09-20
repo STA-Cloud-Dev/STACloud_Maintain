@@ -10,18 +10,17 @@ import (
 	"time"
 )
 
-//go:embed public logo
+//go:embed docs
 var siteFiles embed.FS
 
 func main() {
 	addr := ":" + env("PORT", "8080")
 
-	publicFS := mustSub(siteFiles, "public")
-	logoFS := mustSub(siteFiles, "logo")
+	docsFS := mustSub(siteFiles, "docs")
 
 	mux := http.NewServeMux()
-	mux.Handle("/assets/", withHeaders(http.FileServer(http.FS(publicFS))))
-	mux.Handle("/logo/", withHeaders(http.StripPrefix("/logo/", http.FileServer(http.FS(logoFS)))))
+	mux.Handle("/assets/", withHeaders(http.FileServer(http.FS(docsFS))))
+	mux.Handle("/logo/", withHeaders(http.FileServer(http.FS(docsFS))))
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/" && r.URL.Path != "/index.html" {
 			http.NotFound(w, r)
@@ -30,7 +29,7 @@ func main() {
 
 		w.Header().Set("Cache-Control", "no-store")
 		w.Header().Set("X-Content-Type-Options", "nosniff")
-		http.ServeFileFS(w, r, publicFS, "index.html")
+		http.ServeFileFS(w, r, docsFS, "index.html")
 	})
 
 	server := &http.Server{

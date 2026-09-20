@@ -25,3 +25,8 @@ npm run go:dev
 ```
 
 Lenh Go yeu cau moi truong da cai Go 1.22 tro len.
+
+## GitHub Pages
+
+Trang tĩnh được đặt tại `docs/` để GitHub Pages có thể publish trực tiếp từ
+nhánh `main` và thư mục `/docs`, không cần GitHub Actions.
