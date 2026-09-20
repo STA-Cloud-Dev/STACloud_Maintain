@@ -205,6 +205,58 @@
       </footer>
     </div>
 
-    <script src="assets/app-v20260920.js" defer></script>
+    <script>
+      const clock = document.querySelector("#clock");
+      const portalStatus = document.querySelector("#portal-check-status");
+      const portalCountdown = document.querySelector("#portal-countdown");
+      const portalUrl = "https://portal.stacloud.dev/";
+      const portalCheckIntervalMs = 60_000;
+      let secondsUntilPortalCheck = portalCheckIntervalMs / 1000;
+
+      function formatTime(date) {
+        return new Intl.DateTimeFormat("vi-VN", {
+          dateStyle: "medium",
+          timeStyle: "medium"
+        }).format(date);
+      }
+
+      function updateClock() {
+        if (clock) {
+          clock.textContent = `Cập nhật lúc ${formatTime(new Date())}`;
+        }
+      }
+
+      function updatePortalCountdown() {
+        if (!portalStatus || !portalCountdown) {
+          return;
+        }
+
+        portalCountdown.textContent = String(secondsUntilPortalCheck);
+        portalStatus.firstChild.textContent = "Sẽ tự kiểm tra lại portal.stacloud.dev sau ";
+      }
+
+      function checkPrimaryPortal() {
+        if (portalStatus) {
+          portalStatus.setAttribute("aria-live", "polite");
+          portalStatus.textContent = "Đang chuyển đến portal.stacloud.dev để kiểm tra trạng thái...";
+        }
+
+        window.location.assign(portalUrl);
+      }
+
+      updateClock();
+      updatePortalCountdown();
+      window.setInterval(updateClock, 1000);
+      window.setInterval(() => {
+        secondsUntilPortalCheck -= 1;
+
+        if (secondsUntilPortalCheck <= 0) {
+          checkPrimaryPortal();
+          return;
+        }
+
+        updatePortalCountdown();
+      }, 1000);
+    </script>
   </body>
 </html>
