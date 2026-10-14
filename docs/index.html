@@ -195,7 +195,7 @@
         <span class="portal-check-icon" aria-hidden="true"></span>
         <p>
           <strong>Đang theo dõi website chính</strong>
-          <span id="portal-check-status">Sẽ tự kiểm tra lại portal.stacloud.dev sau <b id="portal-countdown">60</b> giây.</span>
+          <span id="portal-check-status">Sẽ tự kiểm tra lại portal.stacloud.eu.cc sau <b id="portal-countdown">60</b> giây.</span>
         </p>
       </section>
 
@@ -209,7 +209,7 @@
       const clock = document.querySelector("#clock");
       const portalStatus = document.querySelector("#portal-check-status");
       const portalCountdown = document.querySelector("#portal-countdown");
-      const portalUrl = "https://portal.stacloud.dev/";
+      const portalUrl = "https://portal.stacloud.eu.cc/";
       const portalCheckIntervalMs = 60_000;
       let secondsUntilPortalCheck = portalCheckIntervalMs / 1000;
 
@@ -232,13 +232,13 @@
         }
 
         portalCountdown.textContent = String(secondsUntilPortalCheck);
-        portalStatus.firstChild.textContent = "Sẽ tự kiểm tra lại portal.stacloud.dev sau ";
+        portalStatus.firstChild.textContent = "Sẽ tự kiểm tra lại portal.stacloud.eu.cc sau ";
       }
 
       function checkPrimaryPortal() {
         if (portalStatus) {
           portalStatus.setAttribute("aria-live", "polite");
-          portalStatus.textContent = "Đang chuyển đến portal.stacloud.dev để kiểm tra trạng thái...";
+          portalStatus.textContent = "Đang chuyển đến portal.stacloud.eu.cc để kiểm tra trạng thái...";
         }
 
         window.location.assign(portalUrl);
