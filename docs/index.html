@@ -42,46 +42,76 @@
       </span>
 
       <header class="topbar" aria-label="STACloud">
-        <a class="brand" href="./" aria-label="STACloud maintenance page">
+        <a class="brand" href="./" aria-label="Trang bảo trì STACloud" data-i18n-aria="brandAria">
           <span class="brand-mark">
             <img src="logo/logoSTACloud.png" alt="STACloud">
           </span>
           <span class="brand-copy">
             <strong>STACloud</strong>
-            <span>Maintenance Center</span>
+            <span data-i18n="brandSubtitle">Trung tâm bảo trì</span>
           </span>
         </a>
 
-        <div class="status-pill" role="status" aria-live="polite">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          Đang bảo trì
+        <div class="topbar-actions">
+          <div class="status-pill" role="status" aria-live="polite">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span data-i18n="status">Đang bảo trì</span>
+          </div>
+          <div class="language-switch" role="group" aria-label="Chọn ngôn ngữ" data-i18n-aria="languageLabel">
+            <button type="button" data-lang="vi" aria-pressed="true">VI</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
         </div>
       </header>
 
       <main class="maintenance-layout">
         <section class="hero-copy" aria-labelledby="maintenance-title">
-          <p class="eyebrow">Thông báo hệ thống</p>
-          <h1 id="maintenance-title">Website đang bảo trì</h1>
-          <p class="hero-text">
-            Chúng tôi đang nâng cấp website STACloud để mọi thứ ổn định hơn.
-            Chúng tôi sẽ mở lại sau.
-          </p>
+          <p class="eyebrow" data-i18n="eyebrow">Thông báo hệ thống</p>
+          <h1 id="maintenance-title" data-i18n="title">Website đang bảo trì</h1>
+          <p class="hero-text" data-i18n="description">Chúng tôi đang nâng cấp website STACloud để mọi thứ ổn định hơn. Chúng tôi sẽ mở lại sau.</p>
 
-          <div class="hero-badges" aria-label="Thông tin bảo trì">
-            <span><i class="badge-icon badge-icon-shield" aria-hidden="true"></i>Dữ liệu được bảo vệ</span>
-            <span><i class="badge-icon badge-icon-speed" aria-hidden="true"></i>Tối ưu hiệu năng</span>
+          <div class="hero-badges" aria-label="Thông tin bảo trì" data-i18n-aria="badgesAria">
+            <span><i class="badge-icon badge-icon-shield" aria-hidden="true"></i><span data-i18n="badgeSecurity">Dữ liệu được bảo vệ</span></span>
+            <span><i class="badge-icon badge-icon-speed" aria-hidden="true"></i><span data-i18n="badgeSpeed">Tối ưu hiệu năng</span></span>
           </div>
 
           <div class="notice-panel" role="note">
             <span class="notice-bar" aria-hidden="true"></span>
             <div>
-              <strong>Vui lòng quay lại trong ít phút nữa.</strong>
-              <p>Nếu bạn đang theo dõi dịch vụ, trạng thái mới nhất sẽ được cập nhật tại đây khi website sẵn sàng.</p>
+              <strong data-i18n="noticeTitle">Vui lòng quay lại trong ít phút nữa.</strong>
+              <p data-i18n="noticeBody">Nếu bạn đang theo dõi dịch vụ, trạng thái mới nhất sẽ được cập nhật tại đây khi website sẵn sàng.</p>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="portal-button" href="https://portal.stacloud.eu.cc/">
+              <span data-i18n="visitPortal">Vào Portal ngay</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <span class="redirect-note"><span data-i18n="autoRedirectBefore">Tự chuyển sau</span> <b data-portal-countdown>30</b> <span data-i18n="seconds">giây</span></span>
+          </div>
+
+          <div class="community-links" aria-label="Cộng đồng STACloud" data-i18n-aria="communityAria">
+            <span class="community-caption" data-i18n="communityTitle">Kết nối cộng đồng</span>
+            <div class="community-list">
+              <a href="https://discord.gg/nq8B4JXmnm" target="_blank" rel="noopener noreferrer" aria-label="Cộng đồng Discord" data-i18n-aria="discordAria" title="Discord">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M19.73 5.14a18.8 18.8 0 0 0-4.64-1.43l-.56 1.15a17.4 17.4 0 0 0-5.06 0L8.9 3.71a18.8 18.8 0 0 0-4.64 1.43C1.32 9.45.53 13.66.92 17.82a18.9 18.9 0 0 0 5.7 2.9l1.22-2a12 12 0 0 1-1.9-.92l.47-.36c3.67 1.73 7.52 1.73 11.16 0l.48.36c-.61.35-1.25.66-1.91.92l1.22 2a18.9 18.9 0 0 0 5.7-2.9c.46-4.82-.79-9-3.33-12.68ZM8.46 15.3c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2 2.02.99 2 2.2c0 1.21-.89 2.2-2 2.2Zm7.08 0c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2 2.02.99 2 2.2c0 1.21-.89 2.2-2 2.2Z"/></svg>
+                <span>Discord</span>
+              </a>
+              <a href="https://zalo.me/g/ekaldlnq5sqdn37lvikk" target="_blank" rel="noopener noreferrer" aria-label="Cộng đồng Zalo cho người Việt" data-i18n-aria="zaloAria" title="Zalo">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M5 4.5h14a2.5 2.5 0 0 1 2.5 2.5v9a2.5 2.5 0 0 1-2.5 2.5H10l-5 3v-3A2.5 2.5 0 0 1 2.5 16V7A2.5 2.5 0 0 1 5 4.5Z" fill="currentColor" opacity=".16"/><path d="M5 4.5h14a2.5 2.5 0 0 1 2.5 2.5v9a2.5 2.5 0 0 1-2.5 2.5H10l-5 3v-3A2.5 2.5 0 0 1 2.5 16V7A2.5 2.5 0 0 1 5 4.5Z" stroke="currentColor" stroke-width="1.4"/><path d="M8 9h8l-8 6h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Zalo</span>
+              </a>
+              <a href="https://m.me/j/AbaXFRAcUrDjgFCN/?send_source=gc%3Acopy_invite_link_c" target="_blank" rel="noopener noreferrer" aria-label="Nhóm chat Messenger" data-i18n-aria="messengerAria" title="Messenger">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C6.35 2 2 6.1 2 11.7c0 2.94 1.2 5.52 3.26 7.3V22l3.07-1.69c1.12.39 2.36.6 3.67.6 5.65 0 10-4.1 10-9.7S17.65 2 12 2Zm1.03 13.06-2.6-2.77-5.08 2.77 5.6-5.94 2.66 2.78 5.03-2.78-5.61 5.94Z"/></svg>
+                <span>Messenger</span>
+              </a>
             </div>
           </div>
         </section>
 
-        <section class="visual-panel" aria-label="Trạng thái bảo trì STACloud">
+        <section class="visual-panel" aria-label="Trạng thái bảo trì STACloud" data-i18n-aria="visualAria">
           <div class="cloud-console">
             <div class="console-header">
               <div class="console-lights" aria-hidden="true">
@@ -89,12 +119,12 @@
                 <span></span>
                 <span></span>
               </div>
-              <p><span class="console-online" aria-hidden="true"></span>Maintenance node 01</p>
+              <p><span class="console-online" aria-hidden="true"></span><span data-i18n="maintenanceNode">Nút bảo trì 01</span></p>
             </div>
 
             <div class="console-telemetry" aria-hidden="true">
-              <span><small>REGION</small><strong>VN-SGN</strong></span>
-              <span><small>MODE</small><strong>UPGRADE</strong></span>
+              <span><small data-i18n="regionLabel">KHU VỰC</small><strong>VN-SGN</strong></span>
+              <span><small data-i18n="modeLabel">CHẾ ĐỘ</small><strong data-i18n="upgrade">NÂNG CẤP</strong></span>
             </div>
 
             <div class="logo-orbit" aria-hidden="true">
@@ -102,14 +132,14 @@
             </div>
 
             <div class="server-stack" aria-hidden="true">
-              <span data-label="Web services"></span>
-              <span data-label="Cloud systems"></span>
-              <span data-label="Data integrity"></span>
+              <span data-label="Dịch vụ web" data-i18n-data-label="serviceWeb"></span>
+              <span data-label="Hạ tầng cloud" data-i18n-data-label="serviceCloud"></span>
+              <span data-label="Toàn vẹn dữ liệu" data-i18n-data-label="serviceData"></span>
             </div>
 
             <div class="progress-label">
-              <span>STACloud Website</span>
-              <strong>Maintenance</strong>
+              <span data-i18n="websiteLabel">Website STACloud</span>
+              <strong data-i18n="maintenance">Bảo trì</strong>
             </div>
             <div class="progress-track" aria-hidden="true">
               <span></span>
@@ -118,145 +148,93 @@
         </section>
       </main>
 
-      <section class="status-grid" aria-label="Tình trạng hiện tại">
+      <section class="status-grid" aria-label="Tình trạng hiện tại" data-i18n-aria="statusAria">
         <article class="status-card">
           <span class="card-dot card-dot-warning" aria-hidden="true"></span>
-          <p>Trang chính</p>
-          <strong>Tạm dừng truy cập</strong>
+          <p data-i18n="site">Trang chính</p>
+          <strong data-i18n="siteState">Tạm dừng truy cập</strong>
         </article>
         <article class="status-card">
           <span class="card-dot card-dot-info" aria-hidden="true"></span>
-          <p>Hệ thống</p>
-          <strong>Đang kiểm tra</strong>
+          <p data-i18n="system">Hệ thống</p>
+          <strong data-i18n="systemState">Đang kiểm tra</strong>
         </article>
         <article class="status-card">
           <span class="card-dot card-dot-ready" aria-hidden="true"></span>
-          <p>Dữ liệu</p>
-          <strong>Được bảo toàn</strong>
+          <p data-i18n="data">Dữ liệu</p>
+          <strong data-i18n="dataState">Được bảo toàn</strong>
         </article>
         <article class="status-card">
           <span class="card-dot card-dot-info" aria-hidden="true"></span>
-          <p>Cập nhật</p>
-          <strong>Sẽ mở lại sau</strong>
+          <p data-i18n="updates">Cập nhật</p>
+          <strong data-i18n="updatesState">Sẽ mở lại sau</strong>
         </article>
       </section>
 
       <section class="maintenance-details" aria-labelledby="maintenance-details-title">
         <div class="details-heading">
-          <p class="eyebrow">Tiến trình bảo trì</p>
-          <h2 id="maintenance-details-title">Chúng tôi đang hoàn thiện từng bước</h2>
-          <p>Mỗi hạng mục được kiểm tra kỹ trước khi website hoạt động trở lại.</p>
+          <p class="eyebrow" data-i18n="progressEyebrow">Tiến trình bảo trì</p>
+          <h2 id="maintenance-details-title" data-i18n="progressTitle">Chúng tôi đang hoàn thiện từng bước</h2>
+          <p data-i18n="progressDescription">Mỗi hạng mục được kiểm tra kỹ trước khi website hoạt động trở lại.</p>
         </div>
 
         <ol class="maintenance-steps">
           <li class="step-complete">
             <span class="step-number" aria-hidden="true">01</span>
             <div>
-              <strong>Sao lưu &amp; bảo vệ dữ liệu</strong>
-              <p>Dữ liệu quan trọng đã được xác minh và bảo toàn.</p>
+              <strong data-i18n="step1">Sao lưu &amp; bảo vệ dữ liệu</strong>
+              <p data-i18n="step1Desc">Dữ liệu quan trọng đã được xác minh và bảo toàn.</p>
             </div>
-            <span class="step-state">Hoàn tất</span>
+            <span class="step-state" data-i18n="complete">Hoàn tất</span>
           </li>
           <li class="step-active">
             <span class="step-number" aria-hidden="true">02</span>
             <div>
-              <strong>Nâng cấp hạ tầng</strong>
-              <p>Tối ưu tốc độ, khả năng phản hồi và độ ổn định.</p>
+              <strong data-i18n="step2">Nâng cấp hạ tầng</strong>
+              <p data-i18n="step2Desc">Tối ưu tốc độ, khả năng phản hồi và độ ổn định.</p>
             </div>
-            <span class="step-state">Đang thực hiện</span>
+            <span class="step-state" data-i18n="inProgress">Đang thực hiện</span>
           </li>
           <li>
             <span class="step-number" aria-hidden="true">03</span>
             <div>
-              <strong>Kiểm tra trước khi mở lại</strong>
-              <p>Rà soát toàn bộ luồng truy cập trên desktop và mobile.</p>
+              <strong data-i18n="step3">Kiểm tra trước khi mở lại</strong>
+              <p data-i18n="step3Desc">Rà soát toàn bộ luồng truy cập trên desktop và mobile.</p>
             </div>
-            <span class="step-state">Tiếp theo</span>
+            <span class="step-state" data-i18n="next">Tiếp theo</span>
           </li>
         </ol>
       </section>
 
-      <section class="assurance-strip" aria-label="Cam kết trong thời gian bảo trì">
+      <section class="assurance-strip" aria-label="Cam kết trong thời gian bảo trì" data-i18n-aria="assuranceAria">
         <div>
           <span class="assurance-icon assurance-lock" aria-hidden="true"></span>
-          <p><strong>An toàn dữ liệu</strong><span>Các dữ liệu hiện có vẫn được bảo toàn.</span></p>
+          <p><strong data-i18n="assurance1">An toàn dữ liệu</strong><span data-i18n="assurance1Desc">Các dữ liệu hiện có vẫn được bảo toàn.</span></p>
         </div>
         <div>
           <span class="assurance-icon assurance-cloud" aria-hidden="true"></span>
-          <p><strong>Hạ tầng ổn định</strong><span>Hệ thống đang được kiểm tra liên tục.</span></p>
+          <p><strong data-i18n="assurance2">Hạ tầng ổn định</strong><span data-i18n="assurance2Desc">Hệ thống đang được kiểm tra liên tục.</span></p>
         </div>
         <div>
           <span class="assurance-icon assurance-refresh" aria-hidden="true"></span>
-          <p><strong>Cập nhật trạng thái</strong><span>Chỉ cần tải lại trang khi chúng tôi mở cửa.</span></p>
+          <p><strong data-i18n="assurance3">Cập nhật trạng thái</strong><span data-i18n="assurance3Desc">Chỉ cần tải lại trang khi chúng tôi mở cửa.</span></p>
         </div>
       </section>
 
-      <section class="portal-check" aria-label="Kiểm tra website chính">
+      <section class="portal-check" aria-label="Kiểm tra website chính" data-i18n-aria="portalAria">
         <span class="portal-check-icon" aria-hidden="true"></span>
         <p>
-          <strong>Đang theo dõi website chính</strong>
-          <span id="portal-check-status">Sẽ tự kiểm tra lại portal.stacloud.eu.cc sau <b id="portal-countdown">60</b> giây.</span>
+          <strong data-i18n="portalTitle">Đang theo dõi website chính</strong>
+          <span id="portal-check-status"><span data-i18n="portalBefore">Sẽ tự chuyển đến portal.stacloud.eu.cc sau</span> <b data-portal-countdown>30</b> <span data-i18n="portalAfter">giây.</span></span>
         </p>
       </section>
 
       <footer class="footer-line">
         <span id="clock">Đang cập nhật thời gian...</span>
-        <span>STACloud Maintenance</span>
+        <span data-i18n="footerLabel">STACloud - Bảo trì</span>
       </footer>
     </div>
 
-    <script>
-      const clock = document.querySelector("#clock");
-      const portalStatus = document.querySelector("#portal-check-status");
-      const portalCountdown = document.querySelector("#portal-countdown");
-      const portalUrl = "https://portal.stacloud.eu.cc/";
-      const portalCheckIntervalMs = 60_000;
-      let secondsUntilPortalCheck = portalCheckIntervalMs / 1000;
-
-      function formatTime(date) {
-        return new Intl.DateTimeFormat("vi-VN", {
-          dateStyle: "medium",
-          timeStyle: "medium"
-        }).format(date);
-      }
-
-      function updateClock() {
-        if (clock) {
-          clock.textContent = `Cập nhật lúc ${formatTime(new Date())}`;
-        }
-      }
-
-      function updatePortalCountdown() {
-        if (!portalStatus || !portalCountdown) {
-          return;
-        }
-
-        portalCountdown.textContent = String(secondsUntilPortalCheck);
-        portalStatus.firstChild.textContent = "Sẽ tự kiểm tra lại portal.stacloud.eu.cc sau ";
-      }
-
-      function checkPrimaryPortal() {
-        if (portalStatus) {
-          portalStatus.setAttribute("aria-live", "polite");
-          portalStatus.textContent = "Đang chuyển đến portal.stacloud.eu.cc để kiểm tra trạng thái...";
-        }
-
-        window.location.assign(portalUrl);
-      }
-
-      updateClock();
-      updatePortalCountdown();
-      window.setInterval(updateClock, 1000);
-      window.setInterval(() => {
-        secondsUntilPortalCheck -= 1;
-
-        if (secondsUntilPortalCheck <= 0) {
-          checkPrimaryPortal();
-          return;
-        }
-
-        updatePortalCountdown();
-      }, 1000);
-    </script>
+    <script src="assets/maintenance.js" defer></script>
   </body>
 </html>
